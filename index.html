@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix (My)</title>
+    <!-- Logo -->
+    <link rel="icon" href="images/main-logo.png">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- dark-theme.css -->
+    <link rel="stylesheet" href="dark-theme.css">
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- remixicon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+        integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar 1 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top p-2">
+        <div class="container-fluid p-sm-0 ps-lg-3 pe-lg-3">
+
+            <div class="logo d-flex justify-content-center">
+                <!-- offcanvas -->
+                <button class="navbar-toggler me-3 offcanvas-button" style="border: none;" data-bs-toggle="offcanvas" data-bs-target="#sidemenu">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+
+                <!-- Logo -->
+                <a href="" class="navbar-brand d-flex logo pt-2 pb-2" style="cursor: pointer;">
+                    <img class="mt-1" src="images/main-logo.png" alt="" height="26.58px" width="27px">
+                    <h4 class="ps-2 mb-0 d-none d-sm-block">phoenix</h4>
+                </a>
+            </div>
+
+            <!-- Searchbar -->
+            <div class="nav-search p-1 ps-3 pe-3 d-none w-25 d-sm-none d-lg-flex">
+                <div class="search-icon pe-1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input class="search-input w-100 ps-2" type="search" placeholder="Search...">
+            </div>
+
+            <!-- icons -->
+            <div class="nav-icons d-flex align-items-center">
+                <i id="icon" class="bi bi-brightness-high theme me-3" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-trigger="hover focus" title="Switch Theme"></i>
+                <script>
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip({
+                            placement: 'bottom'
+                        });
+                    });
+                </script>
+
+                <i class="fa-regular fa-bell me-3"></i>
+                <svg class="me-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+                    <circle cx="2" cy="8" r="2" fill="currentColor"></circle>
+                    <circle cx="2" cy="14" r="2" fill="currentColor"></circle>
+                    <circle cx="8" cy="8" r="2" fill="currentColor"></circle>
+                    <circle cx="8" cy="14" r="2" fill="currentColor"></circle>
+                    <circle cx="14" cy="8" r="2" fill="currentColor"></circle>
+                    <circle cx="14" cy="14" r="2" fill="currentColor"></circle>
+                    <circle cx="8" cy="2" r="2" fill="currentColor"></circle>
+                    <circle cx="14" cy="2" r="2" fill="currentColor"></circle>
+                </svg>
+                <img class="rounded-circle me-3" src="images/navabr-profile-img.webp" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar 2 ( vertical navbar ) -->
+    <div class="col-2 d-none vertical-navbar p-2 pt-5 pb-5 mt-4 d-sm-none col-sm-0 col-lg-3 d-lg-block col-xl-2">
+
+        <!-- Dropdown 1 -->
+        <div class="accordion pt-2 pb-3" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                id="headingOne"><i class="ri-arrow-down-s-fill me-1"></i><i
+                    class="fa-regular fa-clock me-2"></i>Home</a>
+            <div id="collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="active ps-4">E commerce</a>
+                </div>
+                <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Project management</a>
+                </div>
+                <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">CRM<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Social feed</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="accordion" id="accordionExample">
+            <p class="ps-4 mb-2">APPS</p>
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                id="headingTwo"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-cart-shopping me-2"></i>E
+                commerce</a>
+
+            <div id="collapseTwo" class="accordion-collapse collapse">
+
+                <!-- Dropdown 2 (1) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTwo1"
+                        id="headingTwo1"><i class="ri-arrow-down-s-fill me-1"></i>Admin</a>
+                    <div id="collapseTwo1" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Add product</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Products</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Customers</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Customer details</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Orders</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Order details</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Refund</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 2 (2) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo2"><i class="ri-arrow-down-s-fill me-1"></i>Customer</a>
+                    <div id="collapseTwo2" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Homepage</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Product details</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Products filter</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Cart</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Checkout</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Shipping info</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Profile</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Favourite stores</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Wishlist</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Order tracking</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Invoice</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Dropdown 3 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0 position-relative" data-bs-toggle="collapse" data-bs-target="#collapseThree"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-phone me-2"></i>CRM
+                    <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+                </a>
+            <div id="collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class=" ps-4">Analytics</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Deals<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Deal details</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Leads</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Lead details</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Reports</a>
+                </div>
+                <div class="accordion-body  ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Reports details<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body  ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Add contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 4 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFour"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-clipboard me-2"></i>Project
+                management</a>
+            <div id="collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Create new</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Project list view</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Project card view</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Project board view</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Todo list</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Project details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-message ps-2 me-2"></i>Chat</a>
+        </div>
+
+        <!-- Dropdown 5 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFive"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-envelope me-2"></i>Email</a>
+            <div id="collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Inbox</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Email detail</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Compose</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 6 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseSix"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-bookmark me-2"></i>Events</a>
+            <div id="collapseSix" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Create an event</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Event detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 7 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseSeven"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-brands fa-trello me-2"></i>Kanban
+                    <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+                </a>
+            <div id="collapseSeven" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Kanban</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Boards<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Create board</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 8 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseEight"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-share-nodes me-2"></i>Social</a>
+            <div id="collapseEight" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Profile</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Settings</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion pb-4" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-calendar ps-2 me-2"></i>Calendar</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <p class="ps-4 mb-2">PAGES</p>
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-compass me-2 ps-2"></i>Starter</a>
+        </div>
+
+        <!-- Dropdown 9 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNine"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-circle-question me-2"></i>Faq
+                    <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+                </a>
+            <div id="collapseNine" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Faq accordion</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Faq tab<button class="ms-2">NEW</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 10 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTen"><i
+                    class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-globe me-2"></i>Landing
+                    <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+                </a>
+            <div id="collapseTen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Default</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Alternate<button class="ms-2">NEW</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 11 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseEleven"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-tag me-2"></i>Pricing</a>
+            <div id="collapseEleven" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Pricing column</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Pricing grid</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-bell me-2 ps-2"></i>Notifications</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-user me-2 ps-2"></i>Members</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-clock me-2 ps-2"></i>Timeline</a>
+        </div>
+
+        <!-- Dropdown 12 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwelve"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-triangle-exclamation me-2"></i>Errors
+                <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+            </a>
+            <div id="collapseTwelve" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">404</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">403<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">500</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 13 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseThirteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-lock me-2"></i>Authentication
+                <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+            </a>
+            <div id="collapseThirteen" class="accordion-collapse collapse">
+                
+                <!-- Dropdown 13 (1) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen1"><i class="ri-arrow-down-s-fill me-1"></i>Simple</a>
+                    <div id="collapseThirteen1" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign in</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign up</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign out</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Forgot password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Reset password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Lock screen</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">2FA<button class="ms-2">NEW</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 13 (2) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen2"><i class="ri-arrow-down-s-fill me-1"></i>Split</a>
+                    <div id="collapseThirteen2" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign in</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign up</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign out</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Forgot password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Reset password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Lock screen</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">2FA<button class="ms-2">NEW</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 13 (3) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen3"><i class="ri-arrow-down-s-fill me-1"></i>Card</a>
+                    <div id="collapseThirteen3" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign in</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign up</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Sign out</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Forgot password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Reset password</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Lock screen</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">2FA<button class="ms-2">NEW</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 14 -->
+        <div class="accordion pb-4" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseFourteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Layouts</a>
+            <div id="collapseFourteen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Vertical sidenav</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Dark mode</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Sidenav collapse</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Darknav</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Topnav slim</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Navbar top slim</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Navbar top</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Horizontal slim</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Combo nav</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Combo nav slim</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Dual nav</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 15 -->
+        <div class="accordion" id="accordionExample">
+            <p class="ps-4 mb-2">MODULES</p>
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseFifteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-file-lines me-2"></i>Forms</a>
+            <div id="collapseFifteen" class="accordion-collapse collapse">
+
+                <!-- Dropdown 15 (1) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFifteen1"><i class="ri-arrow-down-s-fill me-2"></i>Basic</a>
+                    <div id="collapseFifteen1" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Form control</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Input group</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Select</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Checks</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Range</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Floating labels</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Layout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 15 (2) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFifteen2"><i class="ri-arrow-down-s-fill me-2"></i>Advance</a>
+                    <div id="collapseFifteen2" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Advance select</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Date picker</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Editor</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">File uploader</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Rating</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Emoji button</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Validation</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Wizard</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 16 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseSixteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-border-all me-2"></i>Icons</a>
+            <div id="collapseSixteen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Feather</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Font awesome</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Unicons</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 17 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeventeen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Tables</a>
+            <div id="collapseSeventeen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Basic tables</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Advance tables</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Bulk Select</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 18 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseEighteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-chart-simple me-2"></i>ECharts</a>
+            <div id="collapseEighteen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Line charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Bar charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Candlestick charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Geo map</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Scatter charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Pie charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Gauge chart</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Radar charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Heatmap charts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">How to use</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 19 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseNineteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-cube me-2"></i>Components</a>
+            <div id="collapseNineteen" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Accordion</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Avatar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Alerts</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Badge</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Breadcrumb</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Buttons</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Calendar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Card</a>
+                </div>
+
+                <!-- Dropdown 19 (1) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNineteen1"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Carousel</a>
+                    <div id="collapseNineteen1" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Bootstrap</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Swiper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Collapse</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Dropdown</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">List group</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Modals</a>
+                </div>
+
+                <!-- Dropdown 19 (2) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNineteen2"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Navs & Tabs</a>
+                    <div id="collapseNineteen2" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Navs</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Navbar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Tabs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Offcanvas</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Progress bar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Placeholder</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Pagination</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Popovers</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Scrollspy</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Sortable</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Spinners</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Toast</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Tooltips</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Chat widget</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 20 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwenty"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-wrench me-2"></i>Utilities</a>
+            <div id="collapseTwenty" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Background</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Borders</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Colors</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Display</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Flex</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Stacks</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Float</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Grid</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Interactions</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Opacity</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Overflow</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Position</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Shadows</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Sizing</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Spacing</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Typography</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Vertical align</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Visibility</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header accordion-body ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-server me-2 ps-2"></i>Widgets<button class="ms-2">NEW</button></a>
+        </div>
+
+        <!-- Dropdown 21 -->
+        <div class="accordion pb-4" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapse21"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-layer-group me-2"></i>Multi level</a>
+            <div id="collapse21" class="accordion-collapse collapse">
+                
+                <!-- Dropdown 21 (1) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-1"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level two</a>
+                    <div id="collapse21-1" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Item 1</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Item 2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 21 (2) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-2"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level three</a>
+                    <div id="collapse21-2" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Item 3</a>
+                        </div>
+
+                        <!-- Dropdown 21 (2)- 1 -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-2-1"><i class="ri-arrow-down-s-fill ps-4 me-2"></i>Item 4</a>
+                            <div id="collapse21-2-1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5 ms-3">Item 5</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5 ms-3">Item 6</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown 21 (3) -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level four</a>
+                    <div id="collapse21-3" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-5">Item 6</a>
+                        </div>
+
+                        <!-- Dropdown 21 (3)- 1 -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3-1"><i class="ri-arrow-down-s-fill ps-4 me-2"></i>Item 7</a>
+                            <div id="collapse21-3-1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5 ms-3">Item 8</a>
+                                </div>
+
+                                <!-- Dropdown 21 (3)- 1-deep -->
+                                <div class="accordion" id="accordionExample">
+                                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3-1-deep"><i class="ri-arrow-down-s-fill ps-5 me-1"></i>Item 9</a>
+                                    <div id="collapse21-3-1-deep" class="accordion-collapse collapse">
+                                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0 ms-1" href="">
+                                            <a href="" class="ps-5 ms-4">Item 10</a>
+                                        </div>
+                                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0 ms-1" href="">
+                                            <a href="" class="ps-5 ms-4">Item 11</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <p class="ps-4 mb-2">DOCUMENTATION</p>
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-life-ring me-2 ps-2"></i>Getting started</a>
+        </div>
+
+        <!-- Dropdown 22 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapse22"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-gear me-2"></i>Customization
+                <svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator position-absolute bottom-10" height=".4rem" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
+            </a>
+            <div id="collapse22" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Configuration</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Styling</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Color<button class="ms-2">NEW</button></a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Dark Mode</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Plugin</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown 23 -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                data-bs-target="#collapse23"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Layouts doc</a>
+            <div id="collapse23" class="accordion-collapse collapse">
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Vertical navbar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Horizontal navbar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Combo navbar</a>
+                </div>
+                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                    <a href="" class="ps-4">Dual nav</a>
+                </div> 
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-brands fa-gulp me-3 ps-2"></i>Gulp</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-brands fa-figma ps-2 me-2"></i>Design file</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-code-merge ps-2 me-2"></i>Changelog</a>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="accordion" id="accordionExample">
+            <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-desktop me-2 ps-2"></i>Showcase</a>
+        </div>
+
+    </div>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidemenu">
+
+        <div class="offcanvas-body pt-3 pb-3">
+            <div class="offcanvas-navbar">
+                <!-- Dropdown 1 -->
+                <div class="accordion pt-2 pb-3" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        id="headingOne"><i class="ri-arrow-down-s-fill me-1"></i><i
+                            class="fa-regular fa-clock me-2"></i>Home</a>
+                    <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="active ps-4">E commerce</a>
+                        </div>
+                        <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Project management</a>
+                        </div>
+                        <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">CRM</a>
+                        </div>
+                        <div class="accordion-body active ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Social feed</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 2 -->
+                <div class="accordion" id="accordionExample">
+                    <p class="ps-4 mb-2">APPS</p>
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        id="headingTwo"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-cart-shopping me-2"></i>E
+                        commerce</a>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+        
+                        <!-- Dropdown 2 (1) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTwo1"
+                                id="headingTwo1"><i class="ri-arrow-down-s-fill me-1"></i>Admin</a>
+                            <div id="collapseTwo1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Add product</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Products</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Customers</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Customer details</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Orders</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Order details</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Refund</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 2 (2) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo2"><i class="ri-arrow-down-s-fill me-1"></i>Customer</a>
+                            <div id="collapseTwo2" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Homepage</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Product details</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Products filter</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Cart</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Checkout</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Shipping info</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Profile</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Favourite stores</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Wishlist</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Order tracking</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Invoice</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <!-- Dropdown 3 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThree"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-phone me-2"></i>CRM</a>
+                    <div id="collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class=" ps-4">Analytics</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Deals</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Deal details</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Leads</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Lead details</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Reports</a>
+                        </div>
+                        <div class="accordion-body  ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Reports details</a>
+                        </div>
+                        <div class="accordion-body  ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Add contact</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 4 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFour"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-clipboard me-2"></i>Project
+                        management</a>
+                    <div id="collapseFour" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Create new</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Project list view</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Project card view</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Project board view</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Todo list</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Project details</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-message ps-2 me-2"></i>Chat</a>
+                </div>
+        
+                <!-- Dropdown 5 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFive"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-envelope me-2"></i>Email</a>
+                    <div id="collapseFive" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Inbox</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Email detail</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Compose</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 6 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseSix"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-bookmark me-2"></i>Events</a>
+                    <div id="collapseSix" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Create an event</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Event detail</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 7 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseSeven"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-brands fa-trello me-2"></i>Kanban</a>
+                    <div id="collapseSeven" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Kanban</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Boards</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Create board</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 8 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseEight"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-share-nodes me-2"></i>Social</a>
+                    <div id="collapseEight" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Profile</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Settings</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion pb-4" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-calendar ps-2 me-2"></i>Calendar</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <p class="ps-4 mb-2">PAGES</p>
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-compass me-2 ps-2"></i>Starter</a>
+                </div>
+        
+                <!-- Dropdown 9 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNine"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-circle-question me-2"></i>Faq</a>
+                    <div id="collapseNine" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Faq accordion</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Faq tab</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 10 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseTen"><i
+                            class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-globe me-2"></i>Landing</a>
+                    <div id="collapseTen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Default</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Alternate</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 11 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEleven"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-tag me-2"></i>Pricing</a>
+                    <div id="collapseEleven" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Pricing column</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Pricing grid</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-bell me-2 ps-2"></i>Notifications</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-user me-2 ps-2"></i>Members</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-regular fa-clock me-2 ps-2"></i>Timeline</a>
+                </div>
+        
+                <!-- Dropdown 12 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwelve"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-triangle-exclamation me-2"></i>Errors</a>
+                    <div id="collapseTwelve" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">404</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">403</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">500</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 13 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThirteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-lock me-2"></i>Authentication</a>
+                    <div id="collapseThirteen" class="accordion-collapse collapse">
+                        
+                        <!-- Dropdown 13 (1) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen1"><i class="ri-arrow-down-s-fill me-1"></i>Simple</a>
+                            <div id="collapseThirteen1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign in</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign up</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign out</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Forgot password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Reset password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Lock screen</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">2FA</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 13 (2) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen2"><i class="ri-arrow-down-s-fill me-1"></i>Split</a>
+                            <div id="collapseThirteen2" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign in</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign up</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign out</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Forgot password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Reset password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Lock screen</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">2FA</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 13 (3) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseThirteen3"><i class="ri-arrow-down-s-fill me-1"></i>Card</a>
+                            <div id="collapseThirteen3" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign in</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign up</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Sign out</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Forgot password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Reset password</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Lock screen</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">2FA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 14 -->
+                <div class="accordion pb-4" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFourteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Layouts</a>
+                    <div id="collapseFourteen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Vertical sidenav</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Dark mode</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Sidenav collapse</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Darknav</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Topnav slim</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Navbar top slim</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Navbar top</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Horizontal slim</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Combo nav</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Combo nav slim</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Dual nav</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 15 -->
+                <div class="accordion" id="accordionExample">
+                    <p class="ps-4 mb-2">MODULES</p>
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFifteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-regular fa-file-lines me-2"></i>Forms</a>
+                    <div id="collapseFifteen" class="accordion-collapse collapse">
+        
+                        <!-- Dropdown 15 (1) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFifteen1"><i class="ri-arrow-down-s-fill me-2"></i>Basic</a>
+                            <div id="collapseFifteen1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Form control</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Input group</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Select</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Checks</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Range</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Floating labels</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Layout</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 15 (2) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFifteen2"><i class="ri-arrow-down-s-fill me-2"></i>Advance</a>
+                            <div id="collapseFifteen2" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Advance select</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Date picker</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Editor</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">File uploader</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Rating</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Emoji button</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Validation</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Wizard</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 16 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSixteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-border-all me-2"></i>Icons</a>
+                    <div id="collapseSixteen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Feather</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Font awesome</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Unicons</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 17 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeventeen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Tables</a>
+                    <div id="collapseSeventeen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Basic tables</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Advance tables</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Bulk Select</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 18 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEighteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-chart-simple me-2"></i>ECharts</a>
+                    <div id="collapseEighteen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Line charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Bar charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Candlestick charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Geo map</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Scatter charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Pie charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Gauge chart</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Radar charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Heatmap charts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">How to use</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 19 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNineteen"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-cube me-2"></i>Components</a>
+                    <div id="collapseNineteen" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Accordion</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Avatar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Alerts</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Badge</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Breadcrumb</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Buttons</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Calendar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Card</a>
+                        </div>
+        
+                        <!-- Dropdown 19 (1) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNineteen1"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Carousel</a>
+                            <div id="collapseNineteen1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Bootstrap</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Swiper</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Collapse</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Dropdown</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">List group</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Modals</a>
+                        </div>
+        
+                        <!-- Dropdown 19 (2) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapseNineteen2"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Navs & Tabs</a>
+                            <div id="collapseNineteen2" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Navs</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Navbar</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Tabs</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Offcanvas</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Progress bar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Placeholder</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Pagination</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Popovers</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Scrollspy</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Sortable</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Spinners</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Toast</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Tooltips</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Chat widget</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 20 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwenty"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-wrench me-2"></i>Utilities</a>
+                    <div id="collapseTwenty" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Background</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Borders</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Colors</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Display</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Flex</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Stacks</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Float</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Grid</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Interactions</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Opacity</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Overflow</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Position</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Shadows</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Sizing</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Spacing</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Typography</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Vertical align</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Visibility</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-server me-2 ps-2"></i>Widgets</a>
+                </div>
+        
+                <!-- Dropdown 21 -->
+                <div class="accordion pb-4" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-layer-group me-2"></i>Multi level</a>
+                    <div id="collapse21" class="accordion-collapse collapse">
+                        
+                        <!-- Dropdown 21 (1) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-1"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level two</a>
+                            <div id="collapse21-1" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Item 1</a>
+                                </div>
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Item 2</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 21 (2) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-2"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level three</a>
+                            <div id="collapse21-2" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Item 3</a>
+                                </div>
+        
+                                <!-- Dropdown 21 (2)- 1 -->
+                                <div class="accordion" id="accordionExample">
+                                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-2-1"><i class="ri-arrow-down-s-fill ps-4 me-2"></i>Item 4</a>
+                                    <div id="collapse21-2-1" class="accordion-collapse collapse">
+                                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                            <a href="" class="ps-5 ms-3">Item 5</a>
+                                        </div>
+                                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                            <a href="" class="ps-5 ms-3">Item 6</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Dropdown 21 (3) -->
+                        <div class="accordion" id="accordionExample">
+                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3"><i class="ri-arrow-down-s-fill ps-2 me-1"></i>Level four</a>
+                            <div id="collapse21-3" class="accordion-collapse collapse">
+                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                    <a href="" class="ps-5">Item 6</a>
+                                </div>
+        
+                                <!-- Dropdown 21 (3)- 1 -->
+                                <div class="accordion" id="accordionExample">
+                                    <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3-1"><i class="ri-arrow-down-s-fill ps-4 me-2"></i>Item 7</a>
+                                    <div id="collapse21-3-1" class="accordion-collapse collapse">
+                                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                                            <a href="" class="ps-5 ms-3">Item 8</a>
+                                        </div>
+        
+                                        <!-- Dropdown 21 (3)- 1-deep -->
+                                        <div class="accordion" id="accordionExample">
+                                            <a class="accordion-header ps-5 pt-2 pb-2 mb-0" data-bs-toggle="collapse" data-bs-target="#collapse21-3-1-deep"><i class="ri-arrow-down-s-fill ps-5 me-1"></i>Item 9</a>
+                                            <div id="collapse21-3-1-deep" class="accordion-collapse collapse">
+                                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0 ms-1" href="">
+                                                    <a href="" class="ps-5 ms-4">Item 10</a>
+                                                </div>
+                                                <div class="accordion-body ps-5 pt-2 pb-2 mb-0 ms-1" href="">
+                                                    <a href="" class="ps-5 ms-4">Item 11</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <p class="ps-4 mb-2">DOCUMENTATION</p>
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-life-ring me-2 ps-2"></i>Getting started</a>
+                </div>
+        
+                <!-- Dropdown 22 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-gear me-2"></i>Customization</a>
+                    <div id="collapse22" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Configuration</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Styling</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Color</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Dark Mode</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Plugin</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dropdown 23 -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-3 pt-2 pb-2 mb-0" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23"><i class="ri-arrow-down-s-fill me-1"></i><i class="fa-solid fa-table-columns me-2"></i>Layouts doc</a>
+                    <div id="collapse23" class="accordion-collapse collapse">
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Vertical navbar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Horizontal navbar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Combo navbar</a>
+                        </div>
+                        <div class="accordion-body ps-5 pt-2 pb-2 mb-0" href="">
+                            <a href="" class="ps-4">Dual nav</a>
+                        </div> 
+                    </div>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-brands fa-gulp me-2 ps-3"></i>Gulp</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-brands fa-figma ps-2 me-2"></i>Design file</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-code-merge ps-2 me-2"></i>Changelog</a>
+                </div>
+        
+                <!-- Dropdown -->
+                <div class="accordion" id="accordionExample">
+                    <a class="accordion-header ps-4 pt-2 pb-2 mb-0"><i class="fa-solid fa-desktop me-2 ps-2"></i>Showcase</a>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-12 main-content pt-5 col-sm-12 col-lg-9 col-xl-10">
+
+        <!-- Section 1 ( Graph Section )-->
+        <div class="container-fluid graph-section p-4 p-sm-4 pt-sm-5 p-lg-5 pb-lg-4">
+            <div class="row p-0">
+                <div class="col-12 graph-sec-part1 mb-2 ps-2 pe-2 pt-4 ps-sm-2 pt-sm-0 pe-sm-2 ps-lg-0 pe-lg-0 ps-xl-2 pe-xl-2 ps-xxl-1 pe-xxl-1">
+
+                    <!-- Tital -->
+                    <div class="graph-sec-tital mb-5">
+                        <h2 class="mb-0">Ecommerce Dashboard</h2>
+                        <p>Here’s what’s going on at your business right now</p>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="graph-sec-content d-block d-sm-block d-md-flex pb-2">
+                        <div class="col-12 graph-sec-content-box mb-2 me-3 d-flex col-sm-12 mb-sm-2 col-md-4 me-md-0 mb-md-0 col-xl-3 col-xxl-2 me-xxl-3">
+                            <img class="me-3" src="images/graph-sec-svg1.png" alt="" height="49px" width="46px">
+                            <div class="graph-sec-con">
+                                <h5 class="mb-0">57 new orders</h5>
+                                <p>Awating processing</p>
+                            </div>
+                        </div>
+                        <div class="col-12 graph-sec-content-box mb-2 d-flex col-sm-12 mb-sm-2 col-md-3 mb-md-0 col-xl-2 me-xl-2">
+                            <img class="me-3" src="images/graph-sec-svg2.png" alt="" height="49px" width="46px">
+                            <div class="graph-sec-con">
+                                <h5 class="mb-0">5 orders</h5>
+                                <p>On hold</p>
+                            </div>
+                        </div>
+                        <div class="col-12 graph-sec-content-box mb-2 d-flex col-sm-12 col-md-3 col-xl-3 col-xxl-2">
+                            <img class="me-3" src="images/graph-sec-svg3.png" alt="" height="49px" width="46px">
+                            <div class="graph-sec-con">
+                                <h5 class="mb-0">15 products</h5>
+                                <p>Out of stock</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graph -->
+                    <div class="graph-sec-graph-box pt-4">
+                        <!-- Graph Tital -->
+                        <div class="graph-tital mb-4 d-block d-sm-flex justify-content-between align-items-center">
+                            <div class="col-12 col-sm-8 g-tital pt-2">
+                                <h4 class="mb-0">Total sells</h4>
+                                <p>Payment received across all channels</p>
+                            </div>
+                            <div class="col-12 col-sm-4 graph-dates">
+                                <select class="form-select ps-3">
+                                    <option selected>Mar 1 - 31, 2022</option>
+                                    <option value="1">April 1 - 30, 2022</option>
+                                    <option value="2">May 1 - 31, 2022</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Main Graph -->
+                        <div class="col-12 main-graph">
+
+                            <canvas id="myChart"></canvas>
+
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            <script src="chart.js"></script>
+
+                            <script>
+                                const ctx = document.getElementById('myChart');
+
+                                new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: ['', '01 May', '', '', '', '', '', '', '', '', '', '', '', '', '15 May', '', '', '', '', '', '', '', '', '', '', '', '', '', '30 May', ''],
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [2, 4, 6, 6, 6, 4, 3, 3, 3, 5, 7, 7, 7, 8, 9, 10, 11, 13, 15, 10, 8, 8, 8, 6, 4, 4, 5, 5, 5, 6],
+                                            borderWidth: 1
+                                        },
+                                        {
+                                            label: '# of Votes',
+                                            data: [4, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 6, 8, 8, 8, 11, 13, 11, 9, 7, 5, 6, 7, 8, 9, 10, 8],
+                                            borderWidth: 1
+                                        },
+                                        ],
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 graph-sec-part2">
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12 ps-2 pe-2 mb-3 col-sm-12 col-xl-6">
+                                <div class="graph-sec-part2-box p-3">
+                                    <!-- Tital -->
+                                    <div class="g-part2-box-tital d-flex justify-content-between">
+                                        <div class="left-tital d-flex">
+                                            <div class="left-content me-2">
+                                                <h6 class="mb-0">Total orders</h6>
+                                                <p>Last 7 days</p>
+                                            </div>
+                                            <div class="left-button">
+                                                <a href="" class="btn btn-dark">-6.8%</a>
+                                            </div>
+                                        </div>
+                                        <div class="count">
+                                            <h5>16,247</h5>
+                                        </div>
+                                    </div>
+                                    <!-- Middle Graph -->
+                                    <div class="g-part2-mid-graph">
+                                        <canvas id="firstChart"></canvas>
+
+                                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                        <script>
+                                            const cta = document.getElementById('firstChart');
+
+                                            new Chart(cta, {
+                                                type: 'bar',
+                                                data: {
+                                                    labels: ['01 May', '', '', '', '', '07 May',],
+                                                    datasets: [{
+                                                        label: 'Percentage discount',
+                                                        data: [12, 17, 3, 5, 2, 3],
+                                                        borderWidth: 1
+                                                    },
+                                                    {
+                                                        label: 'Fixed card discount',
+                                                        data: [10, 9, 7, 12, 14, 8],
+                                                        borderWidth: 1
+                                                    },
+                                                    {
+                                                        label: 'Fixed product discount',
+                                                        data: [8, 5, 9, 19, 7, 13],
+                                                        borderWidth: 1
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        y: {
+                                                            beginAtZero: true
+                                                        }
+                                                    }
+                                                }
+                                            });
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ps-2 pe-2 mb-3 col-sm-12 col-xl-6">
+                                <div class="graph-sec-part2-box p-3">
+                                    <!-- Tital -->
+                                    <div class="g-part2-box-tital d-flex justify-content-between">
+                                        <div class="left-tital d-flex">
+                                            <div class="left-content me-2">
+                                                <h6 class="mb-0">New customers</h6>
+                                                <p>Last 7 days</p>
+                                            </div>
+                                            <div class="left-button">
+                                                <a href="" class="btn btn-dark">+26.5%</a>
+                                            </div>
+                                        </div>
+                                        <div class="count">
+                                            <h5>356</h5>
+                                        </div>
+                                    </div>
+                                    <!-- Middle Graph -->
+                                    <div class="g-part2-mid-graph">
+                                        <canvas id="secondChart"></canvas>
+
+                                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                        <script>
+                                            const ctb = document.getElementById('secondChart');
+
+                                            new Chart(ctb, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ['01 May', '', '', '', '', '', '07 May'],
+                                                    datasets: [{
+                                                        label: 'New customers',
+                                                        data: [8, 6, 8, 5, 12, 10, 16],
+                                                        borderWidth: 2
+                                                    },
+                                                    {
+                                                        label: 'New customers',
+                                                        data: [6, 4, 10, 8, 10, 6, 10],
+                                                        borderWidth: 2
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        y: {
+                                                            beginAtZero: true
+                                                        }
+                                                    }
+                                                }
+                                            });
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ps-2 pe-2 mb-3 col-sm-12 mb-sm-3 col-xl-6 mb-xl-0">
+                                <div class="graph-sec-part2-box p-3">
+                                    <!-- Tital -->
+                                    <div class="g-part2-box-tital d-flex justify-content-between">
+                                        <div class="left-tital d-flex">
+                                            <div class="left-content me-2">
+                                                <h6 class="mb-0">Top coupons</h6>
+                                                <p class="mb-0">Last 7 days</p>
+                                            </div>
+                                            <!-- <div class="left-button">
+                                                <a href="" class="btn btn-dark p-0">-6.8%</a>
+                                            </div> -->
+                                        </div>
+                                        <div class="count">
+                                            <!-- <h5>16,247</h5> -->
+                                        </div>
+                                    </div>
+                                    <!-- Middle Graph -->
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-12 col-sm-6 g-part2-mid-graph">
+                                            <canvas id="thirdChart"></canvas>
+
+                                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                            <script>
+                                                const ctc = document.getElementById('thirdChart');
+
+                                                new Chart(ctc, {
+                                                    type: 'doughnut',
+                                                    data: {
+                                                        labels: ['Blue', 'Red', 'Orange', 'Yellow', 'Green', 'Purple'],
+                                                        datasets: [{
+                                                            label: '# of Votes',
+                                                            data: [12, 19, 3, 5, 2, 3],
+                                                            borderWidth: 1
+                                                        }]
+                                                    },
+                                                    // options: {
+                                                    //     scales: {
+                                                    //         y: {
+                                                    //             beginAtZero: true
+                                                    //         }
+                                                    //     }
+                                                    // }
+                                                });
+
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ps-2 pe-2 col-sm-12 mb-sm-3 col-xl-6 mb-xl-0">
+                                <div class="graph-sec-part2-box p-3">
+                                    <!-- Tital -->
+                                    <div class="g-part2-box-tital d-flex justify-content-between">
+                                        <div class="left-tital d-flex">
+                                            <div class="left-content me-2">
+                                                <h6 class="mb-0">Paying vs non paying</h6>
+                                                <p class="mb-0">Last 7 days</p>
+                                            </div>
+                                            <!-- <div class="left-button">
+                                                <a href="" class="btn btn-dark p-0">-6.8%</a>
+                                            </div> -->
+                                        </div>
+                                        <div class="count">
+                                            <!-- <h5>16,247</h5> -->
+                                        </div>
+                                    </div>
+                                    <!-- Middle Graph -->
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-12 col-sm-6 g-part2-mid-graph ">
+                                            <canvas id="fourthChart"></canvas>
+
+                                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                            <script>
+                                                const ctd = document.getElementById('fourthChart');
+
+                                                new Chart(ctd, {
+                                                    type: 'polarArea',
+                                                    data: {
+                                                        // labels: ['01 May', '', '', 'Green', 'Purple', 'Orange'],
+                                                        datasets: [{
+                                                            // label: '# of Votes',
+                                                            data: [12, 19, 16, 10, 14, 9],
+                                                            borderWidth: 1
+                                                        }]
+                                                    },
+                                                    // options: {
+                                                    //     scales: {
+                                                    //         y: {
+                                                    //             beginAtZero: true
+                                                    //         }
+                                                    //     }
+                                                    // }
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="container-fluid table-section p-4 pt-5 pb-1 p-sm-4 pt-sm-5 p-lg-5 pb-lg-1">
+            <div class="row">
+
+                <!-- Tital -->
+                <div class="col-12 table-sec-tital mb-3 pb-3 ps-1 pe-1 d-block justify-content-between align-items-center mb-sm-0 d-sm-block d-xl-flex">
+                    <div class="col-12 t-sec-left-tital col-sm-12 col-xl-5 col-xxl-6">
+                        <h4 class="mb-0">Latest reviews</h4>
+                        <p>Payment received across all channels</p>
+                    </div>
+                    <div class="col-12 t-sec-right-tital d-block justify-content-end d-sm-flex pb-sm-3 justify-content-sm-between justify-content-md-start col-xl-7 justify-content-xl-end col-xxl-6">
+                        <!-- Searchbar -->
+                        <div class="col-12 mb-3 nav-search p-1 ps-3 pe-3 me-2 d-flex col-sm-7 mb-sm-0" style="border-radius: 5px">
+                            <div class="search-icon pe-1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <input class="search-input w-100 ps-2" type="search" placeholder="Search...">
+                        </div>
+                        <a href="" class="btn btn-light me-2 ms-sm-5 ms-xl-0">All products</a>
+                        <a href="" class="btn btn-light"><i class="bi bi-three-dots"></i></a>
+                    </div>
+                </div>
+
+                <!-- Table Content -->
+                <div class="table mb-0">
+                    <table class="table table-responsive main-table">
+                        <tr class="pt-5">
+                            <td><input class="form-check-input" type="checkbox"></td>
+                            <th class="scroll">PRODUCT</th>
+                            <th>CUSTOMER</th>
+                            <th>RATING</th>
+                            <th>REVIEW</th>
+                            <th>STATUS</th>
+                            <th>TIME</th>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product1.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Sony X85J 75 Inch Sony 4K Ultra HD LED Smart G...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img1.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Suzanne Martinez</h6>
+                            </td>
+                            <td class="pt-4">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </td>
+                            <td class="pt-4">
+                                <p class="mb-0">Excellent. All my doubts were answered by the team quickly. I<br> highly
+                                    recommend it.
+                                </p>
+                            </td>
+                            <td class="pt-4"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-4">
+                                <h6 class="mb-0">Just Now</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product2.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Oculus Rift S PC-Powered VR Gaming Headset</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img2.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Michael Jenkins</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>The order was delivered ahead of schedule. To give us additional<br> time, you should
+                                    leave the packaging sealed with plastic.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 09, 5:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product3.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Nintendo Switch with Neon Blue and Neon Red Jo...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img3.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Jennifer Schramm</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>It performs exactly as expected. There are three of these in the<br> family.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 08, 12:00 AM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product4.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">HORI Racing Wheel Apex for PlayStation 4_3, an...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img4.webp"
+                                    alt="">
+                                <h6 class="d-inline name">
+                                    Ashley Garrett</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>It's a Mac, after all. Once you've gone Mac, there's no going back.<br> My first Mac
+                                    lasted over nine years, and this is my second.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 06, 10:00 AM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product5.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Echo Dot (4th Gen) _ Smart speaker with Alexa ...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img5.webp"
+                                    alt="">
+                                <h6 class="d-inline name">
+                                    Woodrow Burton</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>The controller is quite comfy for me. Despite its increased size,<br> the controller
+                                    still fits well in my hands.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 04, 7:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product6.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Fitbit Sense Advanced Smartwatch with Tools fo...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img6.webp"
+                                    alt="">
+                                <h6 class="d-inline name">
+                                    Barbara Lucas</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>This Fitbit is fantastic! I was trying to be in better shape and needed<br> some
+                                    motivation, so I decided to treat myself to a new Fitbit.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 03, 10:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product7.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Apple Magic Mouse (Wireless, Rechargable) - Si...
+                                </a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img7.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Rowen Atkinson</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>Excellent. All my doubts were answered by the team quickly. I<br> highly recommend
+                                    it.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Nov 01, 8:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product8.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">iPhone 13 pro max-Pacific Blue-128GB storage</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img8.webp"
+                                    alt="">
+                                <h6 class="d-inline name">
+                                    Ansolo Lazinatov</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>The order was delivered ahead of schedule. To give us additional<br> time, you should
+                                    leave the packaging sealed with plastic.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 28, 6:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product9.png" alt="" height="53px" width="53px"
+                                    style="background-color: #f1f4f7;">
+                                <a class="p-2" href="">Apple MacBook Pro 13 inch-M1-8/256GB-space</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img9.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Kim Carroll</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>It performs exactly as expected. There are three of these in the<br> family.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 25, 10:00 AM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product10.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Apple iMac 24" 4K Retina Display M1 8 Core CPU...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img10.webp"
+                                    alt="">
+                                <h6 class="d-inline name">Emma watson</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>It's a Mac, after all. Once you've gone Mac, there's no going back.<br> My first Mac
+                                    lasted over nine years, and this is my second.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 20, 7:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product11.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Razer Kraken v3 x Wired 7.1 Surroung Sound Gam...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img11.jpg"
+                                    alt="" height="40px" width="40px">
+                                <h6 class="d-inline name">
+                                    Eric McGee</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>This theme is great. Clean and easy to understand. Perfect for those <br> who don't
+                                    have time to start everything from scratch. </p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 18, 11:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product12.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">PlayStation 5 DualSense Wireless Controller</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img12.jpg"
+                                    alt="" height="40px" width="40px">
+                                <h6 class="d-inline name">
+                                    Raymond Mims</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>I had a bit of a hard time at first but after I contacted the team <br> they were
+                                    able to help me set up the theme.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 15, 10:00 AM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product13.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href=""> 2021 Apple 12.9-inch iPad Pro (Wi‑Fi, 128GB) -...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img13.jpg"
+                                    alt="" height="40px" width="40px">
+                                <h6 class="d-inline name">
+                                    Anthony Hopkins</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>This template has allowed me to convert my existing web app into <br> a great
+                                    looking, easy to use UI in less than 2 weeks.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge badge2">PENDING<i
+                                        class="bi bi-clock ms-2"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 13, 12:00 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product14.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Amazon Basics Mesh, Mid-Back, Swivel Office De...
+                                </a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img14.jpg"
+                                    alt="" height="40px" width="40px">
+                                <h6 class="d-inline name">
+                                    Richard Dawkins</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>The best experience we could hope for. Customer service team is <br> amazing and the
+                                    quality of their products is unsurpassed.</p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 11, 10:30 PM</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-4"><input class="form-check-input" type="checkbox">
+                            </td>
+                            <td><img class="product" src="images/table-product15.png" alt="" height="53px" width="53px">
+                                <a class="p-2" href="">Amazon Basics Matte Black Wired Keyboard - US ...</a>
+                            </td>
+                            <td class="pt-3"><img class="rounded rounded-circle me-2" src="images/table-img15.jpg"
+                                    alt="" height="40px" width="40px">
+                                <h6 class="d-inline name">
+                                    Kristine Cadena</h6>
+                            </td>
+                            <td class="pt-3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                                <i class="fa-regular fa-star star"></i>
+                            </td>
+                            <td class="pt-3">
+                                <p>Personally, I like the minimalist style, but I wouldn't choose it </p>
+                            </td>
+                            <td class="pt-3"><span class="badge">APPROVED<i class="bi bi-check2 ms-2 icon"></i></span>
+                            </td>
+                            <td class="pt-3">
+                                <h6>Oct 8, 05:45 PM</h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Table Last Content -->
+                <div class="t-last-Content d-block d-sm-flex pb-3 pb-sm-0 justify-content-between">
+                    <p>1 to 6 Items of 15</p>
+                    <a href="">Scroll down<i class="fa-solid fa-arrow-down-long ps-2 pe-2"></i>to View all</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="container-fluid map-section">
+            <div class="row">
+
+                <div class="col-12 p-4 ps-2 pe-2 table2 col-sm-12 p-sm-4 ps-sm-2 ps-md-3 col-xl-6 ps-xxl-4">
+                    <div class="table2-tital pb-4 ps-2 ps-sm-2 ps-md-3 text-md-center text-xl-start ps-xl-4">
+                        <h4 class="mb-0">Top regions by revenue</h4>
+                        <p>Where you generated most of the revenue</p>
+                    </div>
+
+                    <table class="table second-table table-responsive">
+                        <tr>
+                            <th></th>
+                            <th class="country">COUNTRY</th>
+                            <th class="country">USERS</th>
+                            <th>TRANSACTIONS</th>
+                            <th>REVENUE</th>
+                            <th>CONV. RATE</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="pt-3 pb-2 country">
+                                <h4>377,620</h4>
+                            </td>
+                            <td class="pt-3 pb-2">
+                                <h4>236</h4>
+                            </td>
+                            <td class="pt-3 pb-2">
+                                <h4>$15,758</h4>
+                            </td>
+                            <td class="pt-3 pb-2">
+                                <h4>10.32%</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">1.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/india.png" alt=""><a
+                                    href="">India</a></td>
+                            <td class="pt-3 pb-3">92896<span class="ms-2">(41.6%)</span> </td>
+                            <td class="pt-3 pb-3">67<span class="ms-2">(34.3%)</span> </td>
+                            <td class="pt-3 pb-3">$7560<span class="ms-2">(36.9%)</span> </td>
+                            <td class="pt-3 pb-3">14.01%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">2.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/china.png" alt=""><a
+                                    href="">China</a></td>
+                            <td class="pt-3 pb-3">50496<span class="ms-2">(32.8%)</span></td>
+                            <td class="pt-3 pb-3">54<span class="ms-2">(23.8%)</span></td>
+                            <td class="pt-3 pb-3">$6532<span class="ms-2">(26.5%)</span></td>
+                            <td class="pt-3 pb-3">23.56%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">3.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/usa.png" alt=""><a
+                                    href="">USA</a></td>
+                            <td class="pt-3 pb-3">45679<span class="ms-2">(24.3%)</span></td>
+                            <td class="pt-3 pb-3">35<span class="ms-2">(19.7%)</span></td>
+                            <td class="pt-3 pb-3">$5432<span class="ms-2">(16.9%)</span></td>
+                            <td class="pt-3 pb-3">10.23%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">4.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/south-korea.png" alt=""><a
+                                    href="">South Korea</a></td>
+                            <td class="pt-3 pb-3">36453<span class="ms-2">(19.7%)</span></td>
+                            <td class="pt-3 pb-3">22<span class="ms-2">(9.54%)</span></td>
+                            <td class="pt-3 pb-3">$4673<span class="ms-2">(11.6%)</span></td>
+                            <td class="pt-3 pb-3">8.85%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">5.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/vietnam.png" alt=""><a
+                                    href="">Vietnam</a></td>
+                            <td class="pt-3 pb-3">15007<span class="ms-2">(11.9%)</span></td>
+                            <td class="pt-3 pb-3">17<span class="ms-2">(6.91%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">$2456
+                                <span class="ms-2">(10.2%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">6.01%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">6.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/russia.png" alt=""><a
+                                    href="">Russia</a></td>
+                            <td class="pt-3 pb-3">54215
+                                <span class="ms-2">(32.9%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">38
+                                <span class="ms-2">(7.91%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">$3254
+                                <span class="ms-2">(12.4%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">6.21%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">7.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/australia.png" alt=""><a
+                                    href="">Australia</a></td>
+                            <td class="pt-3 pb-3">54789
+                                <span class="ms-2">(12.7%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">32
+                                <span class="ms-2">(14.0%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">$3215
+                                <span class="ms-2">(5.72%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">12.02%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">8.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/england.png" alt=""><a
+                                    href="">England</a></td>
+                            <td class="pt-3 pb-3">14785<span class="ms-2">(12.9%)</span></td>
+                            <td class="pt-3 pb-3">11
+                                <span class="ms-2">(32.91%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">$4745<span class="ms-2">(10.2%)</span></td>
+                            <td class="pt-3 pb-3">8.01%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">9.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/indonesia.png" alt=""><a
+                                    href="">Indonesia</a></td>
+                            <td class="pt-3 pb-3">32156
+                                <span class="ms-2">(32.2%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">89
+                                <span class="ms-2">(12.0%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">$2456
+                                <span class="ms-2">(23.2%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">9.07%</td>
+                        </tr>
+                        <tr>
+                            <td class="pt-3 pb-3">10.</td>
+                            <td class="pt-3 pb-3 country"><img class="me-3" src="images/japan.png" alt=""><a
+                                    href="">Japan</a></td>
+                            <td class="pt-3 pb-3">12547
+                                <span class="ms-2">(12.7%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">21<span class="ms-2">(14.91%)</span></td>
+                            <td class="pt-3 pb-3">$2541
+                                <span class="ms-2">(23.2%)</span>
+                            </td>
+                            <td class="pt-3 pb-3">20.01%</td>
+                        </tr>
+                    </table>
+
+                    <!-- Table Last Content -->
+                    <div class="t-last-Content ps-3 d-flex justify-content-between">
+                        <p class="mb-0">1 to 5 Items of 10</p>
+                        <a href="">Scroll down<i class="fa-solid fa-arrow-down-long ps-2 pe-2"></i>to View all</a>
+                    </div>
+                </div>
+                <div class="col-12 p-0 col-sm-12 col-xl-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d61428.417818685964!2d-47.94048907413692!3d-15.78938834782067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlano%20Piloto!5e0!3m2!1spt-BR!2sbr!4v1569520090696!5m2!1spt-BR!2sbr"
+                        width="100%" height="525" frameborder="0" style="border:0;" allowfullscreen=""
+                        class="map"></iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Graph Section 2 -->
+        <div class="container-fluid p-4 ps-3 pe-3 graph-section2 p-sm-4 pt-sm-5 pb-sm-5 p-lg-5 pb-xxl-4">
+            <div class="row">
+                <div class="col-12 ps-sm-2 pe-sm-2 mb-4 col-sm-12 mb-sm-3 ps-lg-1 pe-lg-1 col-xl-6 pe-xl-4">
+                    <div class="g-sec2-graph-tital">
+                        <h4 class="mb-0">Projection vs actual</h4>
+                        <p>Actual earnings vs projected earnings</p>
+                    </div>
+                    <div class="graph-sec2-graph">
+                        <canvas id="fifthChart"></canvas>
+
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                            const cte = document.getElementById('fifthChart');
+
+                            new Chart(cte, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Feb 06', '', '', '', '', '', '', '', '', '', 'Feb 11', '', '', '', '', '', '', '', '', '', 'Feb 20',],
+                                    datasets: [{
+                                        label: 'Projected revenue',
+                                        data: [17, '', 11, '', 11, '', 9, '', 13, '', 6, '', 18, '', 11, '', 11, '', 9, '', 13,],
+                                        borderWidth: 1
+                                    },
+                                    {
+                                        label: 'Actual ravenue',
+                                        data: [16, '', 7, '', 10, '', 9, '', 8, '', 15, '', 12, '', 15, '', 7, '', 10, '', 8,],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+
+                        </script>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 ps-lg-1 pe-lg-1 col-xl-6">
+                    <div class="g-sec2-graph-tital">
+                        <h4 class="mb-0">Returning customer rate</h4>
+                        <p>Rate of customers returning to your shop over time</p>
+                    </div>
+                    <div class="graph-sec2-graph">
+                        <canvas id="sixthChart"></canvas>
+
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                            const ctf = document.getElementById('sixthChart');
+
+                            new Chart(ctf, {
+                                type: 'line',
+                                data: {
+                                    labels: ['', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', ''],
+                                    datasets: [{
+                                        label: 'Fourth time',
+                                        data: [6, 12, 10, 12, 10, 4, 8, 6, 8, 4, 2, 13],
+                                        borderWidth: 1
+                                    },
+                                    {
+                                        label: 'Third time',
+                                        data: [10, 14, 14, 14, 12, 13, 1.5, 1.5, 1.5, 1.5, 12, 16],
+                                        borderWidth: 1
+                                    },
+                                    {
+                                        label: 'Second time',
+                                        data: [8, 8, 5, 10, 3, 11, 11, 3, 11, 11, 11, 11],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container-fluid footer p-4 pt-3 pb-3 pe-sm-5 ps-sm-4 ps-lg-5">
+            <div class="row p-2 ps-0 pe-0 d-block text-center d-sm-flex text-sm-start 
+            justify-content-sm-between">
+                <div class="col-12 col-sm-11 footer-left">
+                    <p class="mb-0">Thank you for creating with Phoenix | 2023 © <span>Themewagon</span></p>
+                </div>
+                <div class="col-12 col-sm-1 text-center footer-right text-sm-right" style="text-align: end;">
+                    <p class="mb-0">v1.14.0</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ 
+    <!-- Tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <!-- Popover -->
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+    <!-- Dark Theme -->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+
+</body>
+
+</html>

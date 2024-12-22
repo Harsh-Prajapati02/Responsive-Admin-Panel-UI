@@ -1,0 +1,356 @@
+.dark-theme{
+    .vertical-navbar {
+        background-color: #141824;
+    }
+
+    .accordion a {
+        color: #9fa6bc;
+        transition: all 0.30s;
+    }
+
+    .accordion a:hover {
+        background-color: #31374a;
+        color: #ffffff;
+        i {
+            color: #ffffff;
+        }
+    }
+
+    .accordion-body button {
+        color: #60C6FF;
+        background-color: #1a2431;
+        border: 1px solid #373e53;
+    }
+
+    .accordion .accordion-body:hover  {
+        background-color: #31374a;
+        a {
+            color: #ffffff;
+        }
+    } 
+
+    .accordion .active {
+        color: #ffffff;
+    } 
+
+    .accordion p {
+        color: #6e7a91;
+    }
+
+    .accordion i {
+        color: #9fa6bc;
+    }
+
+    .vertical-navbar {
+        border-right: 1px solid #373e53;
+    }
+
+    .vertical-navbar::-webkit-scrollbar {
+        background-color: #141824;
+    }
+
+    .vertical-navbar::-webkit-scrollbar-thumb {
+        background-color: #31374a;
+    }
+
+    .navbar {
+        background-color: #141824;
+        border-bottom: 1px solid #373e53;
+    }
+
+    .offcanvas {
+        background-color: #141824;
+    }
+
+    .offcanvas-button {
+        color: #8a94ad;
+    }
+
+    .logo h4 {
+        color: #eff2f6;
+    }
+
+    .nav-search {
+        border: 1px solid #373e53;
+        background-color: #141824;
+    }
+
+    .search-input {
+        background-color: #141824;
+    }
+
+    .nav-icons i, svg {
+        color: #eff2f6a6;
+    }
+
+    .nav-icons .theme {
+        background-color: rgb(133, 169, 255, 0.24);
+        color: #3874ff;
+        transition: all 0.30s;
+    }
+
+    .nav-icons .theme:hover {
+        background-color: rgb(133, 169, 255);
+        color: white;
+    }
+
+    .graph-section {
+        background-color: #0f111a;
+        border-bottom: 1px solid #31374a;
+    }
+
+    .graph-sec-tital h2 {
+        color: #eff2f6;
+    }
+
+    .graph-sec-tital p {
+        color: #8a94ad;
+    }
+
+    .graph-sec-content {
+        border-bottom: 1px solid #31374a;
+    }
+    
+
+    .graph-sec-con h5 {
+        color: #eff2f6;
+    }
+
+    .graph-sec-con p {
+        color: #8a94ad;
+    }
+
+    .graph-tital h4 {
+        color: #eff2f6;
+    }
+
+    .graph-tital p {
+        color: #8a94ad;
+    }
+
+    .graph-dates select {
+        background-color: #141824;
+        color: #9fa6bc;
+        border: 1px solid #373e53;
+    }
+
+    .graph-sec-part2-box {
+        background-color: #141824;
+    }
+
+    .left-tital h6 {
+        color: #eff2f6;
+    }
+
+    .left-tital p {
+        color: #8a94ad;
+    }
+
+    .left-button a {
+        color: #FFCC85;
+        background-color: #262527;
+        border: 1px solid #51453A;
+    }
+
+    .count h5 {
+        color: #eff2f6;
+    }
+
+    .table-section {
+        background-color: #141824;
+        border-bottom: 1px solid #31374a;
+    }
+
+    .t-sec-left-tital h4 {
+        color: #eff2f6;
+    }
+
+    .t-sec-left-tital p {
+        color: #8a94ad;
+    }
+
+    .t-sec-right-tital .nav-search {
+        color: #9fa6bc;
+    }
+
+    .nav-search input {
+        color: #9fa6bc;
+    }
+
+    .t-sec-right-tital a {
+        color: #9fa6bc;
+        background-color: #141824;
+        border: 1px solid #31374a;
+    }
+
+    .t-sec-right-tital a:hover {
+        color: #cbd0dd;
+        background-color: #0f111a;
+    }
+
+    .main-table {
+        border-top: 1px solid #31374a;
+    }
+
+    .main-table tr {
+        border-bottom: 1px solid #31374a;
+    }
+
+    .main-table th {
+        color: #9fa6bc;
+    }
+
+    .main-table input {
+        background-color: #141824;
+        border: 1px solid #373e53;
+    }
+
+    .main-table img {
+        border: 1px solid #373e53;
+    }
+
+    .main-table a {
+        color: #85a9ff;
+    }
+
+    .main-table a:hover {
+        text-decoration: underline;
+    }
+
+    .main-table .name {
+        color: #9fa6bc;
+    }
+
+    .main-table .name:hover {
+        text-decoration: underline;
+    }
+
+    .table i {
+        color: rgb(255, 204, 133);
+    }
+
+    .table .star {
+        color: rgb(229, 120, 11);
+    }
+    
+    .table p {
+        color: #cbd0dd;
+    }
+
+    .table span {
+        color: #90d67f;
+        background-color: #1d2527;
+        border: 1px solid #354739;
+    }
+
+    .table .badge2 {
+        color: #FFCC85;
+        background-color: #262527;
+        border: 1px solid #51453A;
+    }
+
+    .table .icon {
+        color: #90d67f;
+    }
+
+    .table h6 {
+        color: #cbd0dd;
+    }
+
+    .table::-webkit-scrollbar {
+        background-color: #141824;
+    }
+
+    .table::-webkit-scrollbar-thumb {
+        background-color: #31374a;
+    }
+    
+    .t-last-Content p {
+        color: #9fa6bc;
+    }
+
+    .t-last-Content a {
+        color: #85a9ff;
+    }
+
+    .map-section {
+        border-bottom: 1px solid #31374a;
+    }
+
+    .table2 {
+        background-color: #0f111a;
+    }
+
+    .second-table {
+        background-color: #0f111a;
+        border-top: 1px solid #31374a;
+        border-bottom: 1px solid #31374a;
+    }
+
+    .table2-tital h4 {
+        color: #eff2f6;
+    }
+
+    .table2-tital p {
+        color: #8a94ad;
+    }
+
+    .second-table tr {
+        border-bottom: 1px solid #31374a;
+    }
+
+    .second-table th {
+        color: #9fa6bc;
+    }
+
+    .second-table td {
+        color: #eff2f6;
+    }
+
+    .country a {
+        color: #85a9ff;
+    }
+
+    .second-table h4 {
+        color: #eff2f6;
+    }
+
+    .second-table span {
+        color: #8a94ad;
+        border: none;
+        background-color: transparent;
+    }
+
+    .second-table::-webkit-scrollbar {
+        background-color: #0f111a;
+    }
+
+    .graph-section2 {
+        background-color: #141824;
+        border-bottom: 1px solid #31374a;
+    }
+
+    .g-sec2-graph-tital h4 {
+        color: #eff2f6;
+    }
+
+    .g-sec2-graph-tital p {
+        color: #8a94ad;
+    }
+
+    .footer {
+        background-color: #0f111a;
+    }
+
+    .footer-left p {
+        color: #9fa6bc;
+    }
+
+    .footer-left span {
+        color: #85a9ff;
+    }
+
+    .footer-right p {
+        color: #8a94add9;
+    }
+}

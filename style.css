@@ -1,0 +1,549 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff; 
+    border-bottom: 1px solid lightgray; z-index: 1;
+}
+
+.logo h4 {
+    color: #525b75cc;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.nav-search {
+    border: 1px solid #cbd0dd;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-icon i {
+    font-size: 13px;
+    color: #8a94ad;
+}
+
+.nav-icons {
+    cursor: pointer;
+}
+
+.nav-icons i , svg{
+    color: rgb(67, 68, 68);
+    font-size: 19px;
+}
+
+.nav-icons .theme {
+    color: rgb(228, 127, 3);
+    background-color: rgba(255, 204, 133, 0.24);
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 4px 8px;
+    transition: all 0.30s;
+}
+
+.nav-icons .theme:hover {
+    background-color: rgb(229, 127, 3);
+    color: rgb(247, 227, 200);
+}
+
+.tooltip-inner {
+    background-color: #222632 !important;
+    color: #f4f4f4;
+    padding: 7px 10px;
+}
+
+.accordion a {
+    font-size: 12.8px;
+    color: #525b75;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    display: block;
+}
+
+.accordion a:hover {
+    background-color: #f1f4f7;
+}
+
+.accordion-body {
+    border-radius: 10px;
+}
+
+.accordion-body button {
+    font-size: 9.75px;
+    color: #005585;
+    background-color: #c7ebff;
+    border: 1px solid #60C6FF;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 0px 8px;
+}
+
+.accordion .accordion-body:hover  {
+    background-color: #f1f4f7;
+}
+
+.accordion-item:hover {
+    background-color: whitesmoke;
+}
+
+.accordion .active {
+    color: #3874ff;
+} 
+
+.accordion p {
+    color: #525b75;
+    font-size: 10.24px;
+    font-weight: 600;
+}
+
+.accordion i {
+    color: #525b75;
+    font-size: 14px;
+}
+
+.accordion path {
+    color: rgb(0, 151, 235);
+}
+
+.vertical-navbar {
+    /* width: 13.23%; */
+    border-right: 1px solid lightgray;
+    height: 100vh;
+    float: left;
+    position: fixed;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.vertical-navbar::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    background-color: #ffffff;
+}
+
+.vertical-navbar::-webkit-scrollbar-thumb {
+    background-color: #ccccd5;
+    display: none;
+    border-radius: 10px;
+}
+
+.vertical-navbar:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.main-content {
+    float: right;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ccccd5;
+    display: none;
+    border-radius: 10px;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.graph-section {
+    background-color: #f7fafd;
+    border-bottom: 1px solid lightgray; 
+}
+
+.graph-sec-tital h2 {
+    color: #141824;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 575px) {
+    .graph-sec-tital h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .graph-sec-tital h2 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .graph-sec-tital h2 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .graph-sec-tital h2 {
+        font-size: 30px;
+    }
+}
+
+.graph-sec-tital p {
+    color: #525b75;  
+}
+
+.graph-sec-content {
+    border-bottom: 1px solid lightgray;
+}
+
+.graph-sec-con h5 {
+    color: #141824;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.graph-sec-con p {
+    color: #3e4658;
+    font-size: 12.8px;
+}
+
+.graph-tital h4 {
+    color: #141824;
+    font-size: 24.76px;
+    font-weight: 700;
+}
+
+.graph-tital p {
+    color: #525b75;
+}
+
+.graph-dates select {
+    font-size: 12px;
+    color: #31374a;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.graph-sec-part2-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px lightgray;
+}
+
+.left-tital h6 {
+    color: #141824;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.left-tital p {
+    color: #525b75;
+    font-size: 12.8px;
+    font-weight: 600;
+}
+
+.left-button a {
+    color: #BC3803;
+    font-size: 13px;
+    background-color: #FFEFCA;
+    border: 1px solid #FFCC85;
+    padding: 0px 10px;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.count h5 {
+    color: #141824;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.table-section {
+    border-bottom: 1px solid lightgray;
+}
+
+.t-sec-left-tital h4 {
+    color: #141824;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.t-sec-left-tital p {
+    color: #525b75;
+}
+
+.t-sec-right-tital .nav-search {
+    height: 35px;
+}
+
+.t-sec-right-tital a {
+    border: 1px solid #e3e6ed;
+    color: #31374a;
+    background-color: #ffffff;
+    font-size: 12.8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.t-sec-right-tital a:hover {
+    color: #222834;
+    /* background-color: #e3e6ed; */
+    border: 1px solid #e6e9ef;
+}
+
+.main-table {
+    border-top: 1px solid #e3e6ed;
+}
+
+.main-table a:hover {
+    text-decoration: underline;
+}
+
+.main-table .name:hover {
+    text-decoration: underline;
+}
+
+.map {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+
+.table .product {
+    border: 1px solid #e3e6ed;
+    border-radius: 5px;
+}
+
+.table a {
+    text-decoration: none;
+    font-size: 12.8px;
+    color: #3874ff;
+    font-weight: 600;
+}
+
+.table th {
+    font-size: 12.8px;
+    color: #31374a;
+}
+
+.table .name {
+    color: #31374a;
+    font-size: 12.8px;
+}
+
+.table i {
+    font-size: 10px;
+    color: rgb(229, 120, 11);
+}
+
+.table .star {
+    color: rgb(255, 204, 133);
+}
+
+.table p {
+    color: #222834;
+    font-size: 12.8px;
+}
+
+.table span {
+    color: #1C6C09;
+    background-color: #D9FBD0;
+    border: 1px solid #90D67F;
+    font-size: 10.24px;
+    font-weight: 500;
+}
+
+.table .badge2 {
+    color: #BC3803;
+    background-color: #FFEFCA;
+    border: 1px solid #FFCC85;
+}
+
+.table .icon {
+    color: #1C6C09;
+}
+
+.table h6 {
+    color: #222834;
+    font-size: 12.8px;
+}
+
+.main-table {
+    width: 100% !important;
+    height: 500px;
+    overflow-x: scroll;
+    overflow-y: auto; 
+}
+
+th, td {
+    min-width: 40px; 
+}
+
+@media (max-width: 600px) {
+
+    .main-table { 
+        width: 100% !important;
+        overflow-x: scroll; 
+        overflow-y: auto; 
+    }
+
+    th, td {min-width: 40px; }
+}
+
+table {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    table {
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+.table::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background-color: #ccccd5;
+    display: none;
+    border-radius: 10px;
+}
+
+.table:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.t-last-Content p {
+    color: #525b75;
+    font-size: 13.8px;
+    font-weight: 600;
+}
+
+.t-last-Content a {
+    color: #3874ff;
+    font-size: 13.8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.map-section {
+    border-bottom: 1px solid lightgray ;
+}
+
+.table2 {
+    background-color: #f1f4f7;
+}
+
+.second-table {
+    background-color: #f1f4f7;
+    border-top: 1px solid #e3e6ed; border-bottom: 1px solid #e3e6ed;
+}
+
+.table2-tital h4 {
+    color: #141824;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.table2-tital p {
+    color: #525b75;
+}
+
+.second-table {
+    width: 100% !important;
+    height: 350px;
+    overflow-x: auto;
+    overflow-y: auto; 
+}
+
+.second-table th {
+    color: #31374a;
+    font-size: 12px;
+    text-align: end;
+}
+
+.second-table td {
+    color: #141824;
+    font-size: 13.8px;
+    font-weight: 600;
+    text-align: end;
+}
+
+.second-table .country {
+    text-align: start;
+}
+
+.second-table h4 {
+    color: #141824;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.second-table span {
+    border: none;
+    background-color: transparent;
+    font-size: 13.8px;
+    color: #525b75;
+}
+
+.second-table::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f1f4f7;
+}
+
+.graph-section2 {
+    border-bottom: 1px solid lightgray;
+}
+
+.g-sec2-graph-tital h4 {
+    color: #141824;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.g-sec2-graph-tital p {
+    color: #525b75;
+}
+
+.footer {
+    background-color: #f7fafd;
+}
+
+.footer-left p {
+    color: #31374a; 
+}
+
+.footer-left span {
+    color: #3874ff;
+}
+
+.footer-right p {
+    color: #525b75d9;
+}
